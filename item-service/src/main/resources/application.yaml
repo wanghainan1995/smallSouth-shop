@@ -1,0 +1,17 @@
+server:
+  port: 9081
+spring:
+  application:
+    name: item-service
+  profiles:
+    active: dev
+feign:
+  hystrix:
+    enabled: true
+
+sm:
+  db:
+    database: hm-item
+  swagger:
+    title: 商品服务接口文档
+    package: org.small.item.controller

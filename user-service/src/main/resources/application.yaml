@@ -1,0 +1,24 @@
+server:
+  port: 9084
+spring:
+  application:
+    name: user-service # 服务名称
+  profiles:
+    active: dev
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:9999 # 控制台地址
+      http-method-specify: true #请求方式前缀
+
+sm:
+  db:
+    database: hm-user
+  jwt:
+    location: classpath:small.jks
+    alias: jwt
+    password: whn123
+    tokenTTL: 30m
+  swagger:
+    title: 用户服务接口文档
+    package: org.smallSouth.user.controller

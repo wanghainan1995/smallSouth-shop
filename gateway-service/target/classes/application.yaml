@@ -1,0 +1,14 @@
+server:
+  port: 9080
+sm:
+  jwt:
+    location: classpath:small.jks
+    alias: jwt
+    password: whn123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+#      - /hi

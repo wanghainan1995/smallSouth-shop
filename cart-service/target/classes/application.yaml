@@ -1,0 +1,30 @@
+server:
+  port: 9082
+  tomcat:
+    threads:
+      max: 5
+    accept-count: 5
+    max-connections: 5
+sm:
+  db:
+    database: hm-cart
+  swagger:
+    title: 购物车接口文档
+    package: org.small.cart.controller
+  cart:
+    maxSize: 5 #购物车上限
+spring:
+  application:
+    name: cart-service
+  profiles:
+    active: dev
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:9999 # 控制台地址
+      http-method-specify: true #请求方式前缀
+feign:
+  okhttp:
+    enabled: true
+  sentinel:
+    enabled: true

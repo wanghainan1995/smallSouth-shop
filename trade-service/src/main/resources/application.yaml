@@ -1,0 +1,9 @@
+server:
+  port: 9083
+
+sm:
+  db:
+    database: hm-trade
+  swagger:
+    title: 订单服务接口文档
+    package: ogr.small.trade.controller
